@@ -1,0 +1,202 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #1B2A6B;
+  --red: #E03A2F;
+  --green: #3A9E4A;
+  --blue: #2A8CC4;
+  --light-bg: #F8F9FC;
+  --white: #FFFFFF;
+  --gray: #6B7280;
+  --dark: #111827;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--white);
+  color: var(--dark);
+}
+
+.nav-link {
+  color: var(--navy);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--blue);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(27,42,107,0.25);
+}
+
+.btn-outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  padding: 0.7rem 1.75rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: white;
+}
+
+.section-tag {
+  display: inline-block;
+  background: #EEF2FF;
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.section-sub {
+  color: var(--gray);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.card-shadow {
+  box-shadow: 0 4px 24px rgba(27,42,107,0.08);
+}
+
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(27,42,107,0.14);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  background: #25D366;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* ---------- Scroll reveal animations (site-wide) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(56px);
+    transition: opacity 0.9s cubic-bezier(.16,1,.3,1), transform 0.9s cubic-bezier(.16,1,.3,1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* Stagger the inner content (cards, columns, list items) once the section is revealed */
+  .reveal > div > *,
+  .reveal > div > div > * {
+    opacity: 0;
+    transform: translateY(34px) scale(0.97);
+    transition: opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1);
+  }
+
+  .reveal-in > div > *,
+  .reveal-in > div > div > * {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+  }
+
+  .reveal > div > *:nth-child(1),  .reveal > div > div > *:nth-child(1)  { transition-delay: 0.05s; }
+  .reveal > div > *:nth-child(2),  .reveal > div > div > *:nth-child(2)  { transition-delay: 0.12s; }
+  .reveal > div > *:nth-child(3),  .reveal > div > div > *:nth-child(3)  { transition-delay: 0.19s; }
+  .reveal > div > *:nth-child(4),  .reveal > div > div > *:nth-child(4)  { transition-delay: 0.26s; }
+  .reveal > div > *:nth-child(5),  .reveal > div > div > *:nth-child(5)  { transition-delay: 0.33s; }
+  .reveal > div > *:nth-child(6),  .reveal > div > div > *:nth-child(6)  { transition-delay: 0.40s; }
+  .reveal > div > *:nth-child(7),  .reveal > div > div > *:nth-child(7)  { transition-delay: 0.47s; }
+  .reveal > div > *:nth-child(8),  .reveal > div > div > *:nth-child(8)  { transition-delay: 0.54s; }
+  .reveal > div > *:nth-child(9),  .reveal > div > div > *:nth-child(9)  { transition-delay: 0.61s; }
+  .reveal > div > *:nth-child(10), .reveal > div > div > *:nth-child(10) { transition-delay: 0.68s; }
+  .reveal > div > *:nth-child(11), .reveal > div > div > *:nth-child(11) { transition-delay: 0.75s; }
+  .reveal > div > *:nth-child(12), .reveal > div > div > *:nth-child(12) { transition-delay: 0.82s; }
+}
