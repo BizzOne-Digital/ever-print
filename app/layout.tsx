@@ -8,6 +8,11 @@ import ScrollReveal from "@/components/ScrollReveal";
 export const metadata: Metadata = {
   title: "Everprint — A Complete Solution for Your Printing Needs",
   description: "Professional digital printing services: business cards, brochures, banners, wedding cards, signs, and more. Free delivery within 5km on orders above $50.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
