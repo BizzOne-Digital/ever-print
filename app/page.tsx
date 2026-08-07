@@ -62,13 +62,15 @@ export default function Home() {
             .hero-desc { font-size: 0.85rem !important; margin-bottom: 1rem !important; }
             .hero-buttons { margin-bottom: 1rem !important; }
             .hero-buttons a { font-size: 0.8rem !important; padding: 0.55rem 1.1rem !important; }
+            .hero-contact { margin-bottom: 0.5rem !important; }
             .hero-contact a { font-size: 0.75rem !important; }
+            .hero-content { padding-bottom: 0.5rem !important; }
             .hero-img-desktop { display: none !important; }
-            .hero-img-mobile { display: block !important; height: 380px !important; }
+            .hero-img-mobile { display: block !important; height: 230px !important; }
           }
         `}</style>
 
-        <div style={{ zIndex: 1, alignSelf: 'center', minWidth: 0, maxWidth: '900px', padding: '3rem 1.5rem 1.5rem', width: '100%', textAlign: 'center' }}>
+        <div className="hero-content" style={{ zIndex: 1, alignSelf: 'center', minWidth: 0, maxWidth: '900px', padding: '3rem 1.5rem 1.5rem', width: '100%', textAlign: 'center' }}>
           <div className="hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid #E5E7EB', borderRadius: '20px', padding: '0.5rem 1.1rem 0.5rem 0.6rem', marginBottom: '1.5rem', boxShadow: '0 2px 12px rgba(27,42,107,0.06)' }}>
             <span style={{ background: '#E03A2F', color: 'white', fontSize: '0.65rem', fontWeight: 800, padding: '0.2rem 0.6rem', borderRadius: '50px', letterSpacing: '0.05em', alignSelf: 'flex-start', marginTop: '2px' }}>NEW</span>
             <span style={{ fontSize: '0.8rem', color: '#6B7280', fontWeight: 500 }}>Free delivery within 5km<br />on orders above $50</span>
