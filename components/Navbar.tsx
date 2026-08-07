@@ -21,7 +21,7 @@ export default function Navbar() {
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-          <Image src="/logo.png" alt="Everprint logo" width={160} height={48} style={{ objectFit: 'contain', height: '48px', width: 'auto' }} priority />
+          <Image src="/finallogo.png" alt="Everprint logo" width={160} height={48} style={{ objectFit: 'contain', height: '48px', width: 'auto' }} priority />
         </Link>
 
         {/* Desktop Links */}

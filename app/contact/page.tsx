@@ -43,7 +43,7 @@ export default function ContactPage() {
 
             {[
               { label: 'Email', value: 'cmrama2022@gmail.com', href: 'mailto:cmrama2022@gmail.com', icon: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>, color: '#2A8CC4' },
-              { label: 'Phone', value: '17537883428', href: 'tel:17537883428', icon: <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>, color: '#3A9E4A' },
+              { label: 'Phone', value: '+1 753 788 3428', href: 'tel:+17537883428', icon: <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>, color: '#3A9E4A' },
             ].map((c, i) => (
               <a key={i} href={c.href} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.5rem', textDecoration: 'none' }}>
                 <div style={{ width: '44px', height: '44px', background: c.color + '15', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -89,15 +89,13 @@ export default function ContactPage() {
               <>
                 <h3 style={{ fontWeight: 800, color: '#1B2A6B', marginBottom: '1.75rem', fontSize: '1.25rem' }}>Request a Quote</h3>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                    <div>
-                      <label style={{ display: 'block', fontWeight: 600, color: '#374151', fontSize: '0.875rem', marginBottom: '0.5rem' }}>Full Name *</label>
-                      <input style={inputStyle} type="text" placeholder="Your name" value={form.name} onChange={e => setForm({...form, name: e.target.value})} required />
-                    </div>
-                    <div>
-                      <label style={{ display: 'block', fontWeight: 600, color: '#374151', fontSize: '0.875rem', marginBottom: '0.5rem' }}>Phone Number *</label>
-                      <input style={inputStyle} type="tel" placeholder="+1 234 567 8900" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} required />
-                    </div>
+                  <div>
+                    <label style={{ display: 'block', fontWeight: 600, color: '#374151', fontSize: '0.875rem', marginBottom: '0.5rem' }}>Full Name *</label>
+                    <input style={inputStyle} type="text" placeholder="Your name" value={form.name} onChange={e => setForm({...form, name: e.target.value})} required />
+                  </div>
+                  <div>
+                    <label style={{ display: 'block', fontWeight: 600, color: '#374151', fontSize: '0.875rem', marginBottom: '0.5rem' }}>Phone Number *</label>
+                    <input style={inputStyle} type="tel" placeholder="+1 234 567 8900" value={form.phone} onChange={e => setForm({...form, phone: e.target.value})} required />
                   </div>
                   <div>
                     <label style={{ display: 'block', fontWeight: 600, color: '#374151', fontSize: '0.875rem', marginBottom: '0.5rem' }}>Email Address *</label>

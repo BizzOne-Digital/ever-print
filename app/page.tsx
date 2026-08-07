@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
 
 const services = [
@@ -53,10 +52,9 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="hero-section" style={{ backgroundImage: 'url(/hero.png)', backgroundSize: 'cover', backgroundPosition: 'center calc(50% + 30px)', minHeight: '90vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', overflow: 'hidden', position: 'relative' }}>
+      <section className="hero-section" style={{ background: '#F8F9FC', position: 'relative', display: 'flex', flexDirection: 'column', width: '100%', overflowX: 'hidden' }}>
         <style>{`
           @media (max-width: 768px) {
-            .hero-section { background-image: url(/mobile-hero.png) !important; background-position: center calc(100% - 20px) !important; min-height: 700px !important; }
             .hero-badge { padding: 0.3rem 0.8rem 0.3rem 0.4rem !important; margin-bottom: 1rem !important; }
             .hero-badge span { font-size: 0.65rem !important; }
             .hero-badge span:last-child { font-size: 0.7rem !important; }
@@ -65,12 +63,15 @@ export default function Home() {
             .hero-buttons { margin-bottom: 1rem !important; }
             .hero-buttons a { font-size: 0.8rem !important; padding: 0.55rem 1.1rem !important; }
             .hero-contact a { font-size: 0.75rem !important; }
+            .hero-img-desktop { display: none !important; }
+            .hero-img-mobile { display: block !important; height: 380px !important; }
           }
         `}</style>
-        <div style={{ maxWidth: '900px', margin: '0 auto', padding: '2rem 1.5rem 2rem', width: '100%', textAlign: 'center' }}>
-          <div className="hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid #E5E7EB', borderRadius: '50px', padding: '0.4rem 1rem 0.4rem 0.5rem', marginBottom: '1.5rem', boxShadow: '0 2px 12px rgba(27,42,107,0.06)' }}>
-            <span style={{ background: '#E03A2F', color: 'white', fontSize: '0.65rem', fontWeight: 800, padding: '0.2rem 0.6rem', borderRadius: '50px', letterSpacing: '0.05em' }}>NEW</span>
-            <span style={{ fontSize: '0.8rem', color: '#6B7280', fontWeight: 500 }}>Free delivery within 5km on orders above $50</span>
+
+        <div style={{ zIndex: 1, alignSelf: 'center', minWidth: 0, maxWidth: '900px', padding: '3rem 1.5rem 1.5rem', width: '100%', textAlign: 'center' }}>
+          <div className="hero-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: '#fff', border: '1px solid #E5E7EB', borderRadius: '20px', padding: '0.5rem 1.1rem 0.5rem 0.6rem', marginBottom: '1.5rem', boxShadow: '0 2px 12px rgba(27,42,107,0.06)' }}>
+            <span style={{ background: '#E03A2F', color: 'white', fontSize: '0.65rem', fontWeight: 800, padding: '0.2rem 0.6rem', borderRadius: '50px', letterSpacing: '0.05em', alignSelf: 'flex-start', marginTop: '2px' }}>NEW</span>
+            <span style={{ fontSize: '0.8rem', color: '#6B7280', fontWeight: 500 }}>Free delivery within 5km<br />on orders above $50</span>
           </div>
 
           <h1 className="hero-heading" style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', fontWeight: 900, color: '#1B2A6B', lineHeight: 1.1, marginBottom: '1.5rem' }}>
@@ -105,16 +106,24 @@ export default function Home() {
           </div>
 
           {/* Contact bar */}
-          <div className="hero-contact" style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+          <div className="hero-contact" style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2rem' }}>
             <a href="mailto:cmrama2022@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#6B7280', fontSize: '0.875rem', textDecoration: 'none' }}>
               <svg width="16" height="16" fill="none" stroke="#1B2A6B" strokeWidth="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
               cmrama2022@gmail.com
             </a>
-            <a href="tel:17537883428" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#6B7280', fontSize: '0.875rem', textDecoration: 'none' }}>
+            <a href="tel:+17537883428" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#6B7280', fontSize: '0.875rem', textDecoration: 'none' }}>
               <svg width="16" height="16" fill="none" stroke="#1B2A6B" strokeWidth="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-              17537883428
+              +1 753 788 3428
             </a>
           </div>
+        </div>
+
+        {/* Product showcase image, right below the text — cropped to skip the blank space baked into the source file, not stretched */}
+        <div className="hero-img-desktop" style={{ width: '100%', height: '460px', overflow: 'hidden' }}>
+          <img src="/hero.png" alt="Everprint product showcase" style={{ width: '100%', height: '100%', minWidth: 0, objectFit: 'cover', objectPosition: 'bottom center' }} />
+        </div>
+        <div className="hero-img-mobile" style={{ display: 'none', width: '100%', height: '380px', overflow: 'hidden' }}>
+          <img src="/mobile-hero.png" alt="Everprint product showcase" style={{ width: '100%', height: '100%', minWidth: 0, objectFit: 'cover', objectPosition: 'bottom center' }} />
         </div>
       </section>
 
@@ -142,10 +151,10 @@ export default function Home() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
             {processSteps.map((step, i) => (
-              <div key={i} style={{ position: 'relative', background: '#F8F9FC', borderRadius: '16px', padding: '2rem 1.5rem', border: '1px solid #E5E7EB' }}>
-                <div style={{ fontSize: '2.2rem', fontWeight: 900, color: step.color, opacity: 0.25, marginBottom: '0.5rem' }}>{step.num}</div>
-                <h3 style={{ fontWeight: 700, color: '#1B2A6B', marginBottom: '0.5rem', fontSize: '1.05rem' }}>{step.title}</h3>
-                <p style={{ color: '#6B7280', fontSize: '0.875rem', lineHeight: 1.65 }}>{step.desc}</p>
+              <div key={i} className="card-hover" style={{ position: 'relative', background: step.color, borderRadius: '16px', padding: '2rem 1.5rem' }}>
+                <div style={{ fontSize: '2.2rem', fontWeight: 900, color: 'rgba(255,255,255,0.35)', marginBottom: '0.5rem' }}>{step.num}</div>
+                <h3 style={{ fontWeight: 700, color: 'white', marginBottom: '0.5rem', fontSize: '1.05rem' }}>{step.title}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.875rem', lineHeight: 1.65 }}>{step.desc}</p>
               </div>
             ))}
           </div>

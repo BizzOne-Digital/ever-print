@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const team = [
-  { name: 'Chandramohan', role: 'Founder & Director', img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80' },
+  { name: 'Chandramohan', role: 'Founder & Director', img: '/founder.jpeg' },
   { name: 'Production Team', role: 'Print Specialists', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&q=80' },
   { name: 'Design Team', role: 'Creative Designers', img: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80' },
 ];
