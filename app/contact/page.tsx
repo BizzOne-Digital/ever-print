@@ -42,7 +42,7 @@ export default function ContactPage() {
             <h2 style={{ fontWeight: 800, color: '#1B2A6B', fontSize: '1.4rem', marginBottom: '1.5rem' }}>Get in Touch</h2>
 
             {[
-              { label: 'Email', value: 'cmrama2022@gmail.com', href: 'mailto:cmrama2022@gmail.com', icon: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>, color: '#2A8CC4' },
+              { label: 'Email', value: 'info@everprints.ca', href: 'mailto:info@everprints.ca', icon: <><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></>, color: '#2A8CC4' },
               { label: 'Phone', value: '+1 753 788 3428', href: 'tel:+17537883428', icon: <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>, color: '#3A9E4A' },
             ].map((c, i) => (
               <a key={i} href={c.href} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start', marginBottom: '1.5rem', textDecoration: 'none' }}>
