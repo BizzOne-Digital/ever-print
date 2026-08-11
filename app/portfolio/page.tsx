@@ -8,7 +8,7 @@ const portfolioItems = [
   { category: 'Flyers', img: 'https://images.unsplash.com/photo-1712903277236-67ff1a9cbbcd?q=80', title: 'Event Promotion Flyer' },
   { category: 'Signs', img: 'https://images.unsplash.com/photo-1564419965579-5da68ffdf3af?q=80', title: 'Retail Store Signage' },
   { category: 'Booklets', img: 'https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?q=80', title: 'Product Catalogue Booklet' },
-  { category: 'Roll Up Banners', img: 'https://images.unsplash.com/photo-1628406690081-9755572fcd77?q=80', title: 'Exhibition Roll Up Banner' },
+  { category: 'Roll Up Banners', img: '/dark.jpeg', title: 'Exhibition Roll Up Banner' },
 ];
 
 const categories = ['All', ...Array.from(new Set(portfolioItems.map(p => p.category)))];

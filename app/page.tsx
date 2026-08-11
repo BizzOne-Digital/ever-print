@@ -151,7 +151,7 @@ export default function Home() {
             <p className="section-sub" style={{ textAlign: 'center', margin: '0 auto' }}>A simple, hassle-free process designed to get your prints done quickly and correctly the first time.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', alignItems: 'start' }}>
             {processSteps.map((step, i) => (
               <div key={i} className="card-hover" style={{ position: 'relative', background: step.color, borderRadius: '16px', padding: '2rem 1.5rem' }}>
                 <div style={{ fontSize: '2.2rem', fontWeight: 900, color: 'rgba(255,255,255,0.35)', marginBottom: '0.5rem' }}>{step.num}</div>
@@ -172,7 +172,7 @@ export default function Home() {
             <p className="section-sub" style={{ textAlign: 'center', margin: '0 auto' }}>From business essentials to large-format displays, we deliver quality that makes your brand stand out.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', alignItems: 'start' }}>
             {services.map((s, i) => (
               <div key={i} className="card-hover" style={{ background: '#F8F9FC', borderRadius: '16px', padding: '1.75rem', border: '1px solid #E5E7EB' }}>
                 <div style={{ width: '48px', height: '48px', background: 'linear-gradient(135deg, #1B2A6B, #2A8CC4)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '1.25rem' }}>
@@ -273,7 +273,7 @@ export default function Home() {
             <span className="section-tag">Testimonials</span>
             <h2 className="section-heading" style={{ textAlign: 'center' }}>What Our Clients Say</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', alignItems: 'start' }}>
             {testimonials.map((t, i) => (
               <div key={i} className="card-shadow card-hover" style={{ background: 'white', borderRadius: '16px', padding: '2rem', border: '1px solid #E5E7EB' }}>
                 <div style={{ display: 'flex', gap: '2px', marginBottom: '1rem' }}>
